@@ -19,16 +19,16 @@
  
 
 // pid constants 
-#define KP_PID              0.1f
-#define kI_PID              0.03f
-#define KD_PID              0.01f
+#define KP_PID              2000.0f
+#define kI_PID              0.75f
+#define KD_PID              0.00f
 #define TAU_PID             0.01f 
-#define INTEGRATE_MAX_PID   128.0f
-#define INTEGRATE_MIN_PID   -5.0f
+#define INTEGRATE_MAX_PID   40.0f
+#define INTEGRATE_MIN_PID   -30.0f
 #define OUT_MAX_PID         255.0f
 #define OUT_MIN_PID         0.0f  
 #define SAMPLE_TIME         1000.0f
-#define SP_PID              30.0f
+#define SP_PID              4.0f
 
 
 class PID

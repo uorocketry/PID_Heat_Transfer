@@ -143,7 +143,7 @@ void loop()
 void PollRTD()
 {
 
-  float t1, t2, t3;
+  float t1, t2, t3, tavg;
   String date; 
   int pidOutput;
   
@@ -153,9 +153,10 @@ void PollRTD()
     t1 = GetTemp(&thermo1);
     t2 = GetTemp(&thermo2);
     t3 = GetTemp(&thermo3);
+    tavg = (t1+t2+t3)/3;
 
     // control heater 
-    pidOutput = pid.control(t3);
+    pidOutput = pid.control(tavg);
     heat.pwm(pidOutput);
   
     // serial plotter 
